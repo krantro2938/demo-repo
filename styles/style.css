@@ -1,11 +1,4 @@
-/* ========================================
-   Практическое занятие 3: BEM CSS
-   Методология: БЭМ (Блок-Элемент-Модификатор)
-   ======================================== */
 
-/* ========================================
-   CSS RESET
-   ======================================== */
 *,
 *::before,
 *::after {
@@ -25,14 +18,10 @@ body {
     background-color: #fff;
 }
 
-/* ========================================
-   GOOGLE FONTS IMPORT
-   ======================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* ========================================
-   BEM STRUCTURE - HEADER
-   ======================================== */
+
 .header {
     background-color: #fff;
     border-bottom: 1px solid #e5e5e5;
@@ -89,7 +78,6 @@ body {
     height: 20px;
 }
 
-/* BEM - NAV */
 .nav {
     background-color: #f8f9fa;
 }
@@ -133,11 +121,7 @@ body {
     transform: translateY(0);
 }
 
-/* ========================================
-   BEM STRUCTURE - MAIN CONTENT
-   ======================================== */
 
-/* BEM - HERO SECTION */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -180,7 +164,6 @@ body {
     transform: scale(1.02);
 }
 
-/* BEM - BUTTONS */
 .button {
     display: inline-block;
     background-color: #2c5530;
@@ -222,7 +205,6 @@ body {
     color: white;
 }
 
-/* BEM - ADVANTAGES SECTION */
 .advantages {
     background-color: #f8f9fa;
     padding: 4rem 2rem;
@@ -275,7 +257,6 @@ body {
     line-height: 1.6;
 }
 
-/* BEM - PRODUCTS SECTION */
 .products {
     padding: 4rem 2rem;
     max-width: 1200px;
@@ -338,7 +319,6 @@ body {
     color: #2c5530;
 }
 
-/* BEM - BRAND STORY SECTION */
 .brand-story {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -376,7 +356,6 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* BEM - NEWSLETTER SECTION */
 .newsletter {
     background-color: #2c5530;
     color: white;
@@ -443,9 +422,7 @@ body {
     outline-offset: 2px;
 }
 
-/* ========================================
-   BEM STRUCTURE - FOOTER
-   ======================================== */
+
 .footer {
     background-color: #333;
     color: white;
@@ -531,9 +508,7 @@ body {
     filter: brightness(1.2);
 }
 
-/* ========================================
-   HAMBURGER NAVIGATION
-   ======================================== */
+
 .hamburger-nav {
     position: fixed;
     top: 20px;
@@ -602,7 +577,6 @@ body {
     transform: translateX(5px);
 }
 
-/* Hamburger animation when active */
 .hamburger-nav__toggle.active .hamburger-nav__line:nth-child(1) {
     transform: rotate(45deg) translate(8px, 8px);
 }
@@ -622,9 +596,6 @@ body {
     }
 }
 
-/* ========================================
-   UTILITY CLASSES
-   ======================================== */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -649,9 +620,7 @@ body {
     margin-bottom: 2rem;
 }
 
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
+
 @media (max-width: 768px) {
     .hero {
         grid-template-columns: 1fr;
