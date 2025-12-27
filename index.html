@@ -31,8 +31,21 @@
         </nav>
     </header>
 
-    <!-- Hamburger Menu for Anchor Navigation -->
-    <nav class="hamburger-nav" aria-label="Section Navigation">
+    <!-- Desktop Section Navigation -->
+    <nav class="section-nav" aria-label="Section Navigation">
+        <ul class="section-nav__list">
+            <li><a href="#home" class="section-nav__link">Home</a></li>
+            <li><a href="#advantages" class="section-nav__link">Advantages</a></li>
+            <li><a href="#products" class="section-nav__link">Products</a></li>
+            <li><a href="#popular" class="section-nav__link">Popular</a></li>
+            <li><a href="#masonry" class="section-nav__link">Resources</a></li>
+            <li><a href="#about" class="section-nav__link">About</a></li>
+            <li><a href="#newsletter" class="section-nav__link">Newsletter</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hamburger Menu for Mobile -->
+    <nav class="hamburger-nav" aria-label="Mobile Section Navigation">
         <button class="hamburger-nav__toggle" aria-label="Toggle navigation menu">
             <span class="hamburger-nav__line"></span>
             <span class="hamburger-nav__line"></span>
@@ -43,6 +56,7 @@
             <li><a href="#advantages" class="hamburger-nav__link">Advantages</a></li>
             <li><a href="#products" class="hamburger-nav__link">Products</a></li>
             <li><a href="#popular" class="hamburger-nav__link">Popular</a></li>
+            <li><a href="#masonry" class="hamburger-nav__link">Resources</a></li>
             <li><a href="#about" class="hamburger-nav__link">About</a></li>
             <li><a href="#newsletter" class="hamburger-nav__link">Newsletter</a></li>
         </ul>
@@ -155,6 +169,37 @@
                 <input type="email" id="email" name="email" placeholder="your@email.com" required class="signup-form__input">
                 <button type="submit" class="signup-form__button">Sign up</button>
             </form>
+        </section>
+
+        <!-- Masonry Section (Optional) -->
+        <section class="masonry-section" id="masonry">
+            <h2 class="masonry-section__title">Additional Resources</h2>
+            <div class="masonry-grid">
+                <article class="masonry-item masonry-item--short">
+                    <h3 class="masonry-item__title">Quick Tip</h3>
+                    <p class="masonry-item__text">A brief piece of advice for better design practices.</p>
+                </article>
+                <article class="masonry-item masonry-item--tall">
+                    <h3 class="masonry-item__title">Comprehensive Guide</h3>
+                    <p class="masonry-item__text">Detailed explanation of modern web development techniques, including Flexbox, Grid, and responsive design principles with practical examples.</p>
+                </article>
+                <article class="masonry-item masonry-item--medium">
+                    <h3 class="masonry-item__title">Best Practices</h3>
+                    <p class="masonry-item__text">Essential guidelines for creating accessible and performant web applications.</p>
+                </article>
+                <article class="masonry-item masonry-item--very-tall">
+                    <h3 class="masonry-item__title">Advanced Techniques</h3>
+                    <p class="masonry-item__text">In-depth exploration of advanced CSS features, performance optimization strategies, and cutting-edge web technologies that push the boundaries of what's possible in modern web development.</p>
+                </article>
+                <article class="masonry-item masonry-item--medium">
+                    <h3 class="masonry-item__title">Case Study</h3>
+                    <p class="masonry-item__text">Real-world implementation of responsive design patterns in large-scale applications.</p>
+                </article>
+                <article class="masonry-item masonry-item--tall">
+                    <h3 class="masonry-item__title">Future Trends</h3>
+                    <p class="masonry-item__text">Emerging technologies and methodologies that will shape the future of web development, including new CSS features and JavaScript frameworks.</p>
+                </article>
+            </div>
         </section>
 
         <section class="brand-story" id="about">
