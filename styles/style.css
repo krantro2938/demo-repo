@@ -509,7 +509,6 @@ body {
 }
 
 
-/* Desktop Section Navigation */
 .section-nav {
     background-color: #f8f9fa;
     border-bottom: 1px solid #e5e5e5;
@@ -558,7 +557,7 @@ body {
     top: 20px;
     right: 20px;
     z-index: 1001;
-    display: none; /* Hidden by default on desktop */
+    display: none;
 }
 
 .hamburger-nav__toggle {
@@ -634,9 +633,6 @@ body {
     transform: rotate(-45deg) translate(8px, -8px);
 }
 
-/* ========================================
-   ENHANCED FLEXBOX FOR NAVIGATION
-   ======================================== */
 .nav__list {
     display: flex;
     justify-content: center;
@@ -649,9 +645,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* ========================================
-   ENHANCED GRID FOR CONTENT BLOCKS
-   ======================================== */
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -667,9 +660,6 @@ body {
     margin-bottom: 3rem;
 }
 
-/* ========================================
-   MASONRY LAYOUT (OPTIONAL)
-   ======================================== */
 .masonry-section {
     padding: 4rem 2rem;
     max-width: 1200px;
@@ -719,7 +709,6 @@ body {
     line-height: 1.6;
 }
 
-/* Different heights for masonry items */
 .masonry-item--short {
     min-height: 150px;
 }
@@ -736,13 +725,6 @@ body {
     min-height: 400px;
 }
 
-/* ========================================
-   RESPONSIVE DESIGN - DESKTOP FIRST APPROACH
-   ======================================== */
-
-/* Large desktops (1200px+) - Default styles above */
-
-/* Medium desktops (less than 1200px) */
 @media (max-width: 1199px) {
     .hero {
         padding: 3rem 2rem;
@@ -768,7 +750,6 @@ body {
     }
 }
 
-/* Small desktops/tablets (less than 992px) */
 @media (max-width: 991px) {
     .header__top {
         padding: 1rem 1.5rem;
@@ -846,14 +827,13 @@ body {
     }
 }
 
-/* Tablets/small tablets (less than 768px) */
 @media (max-width: 767px) {
     .section-nav {
-        display: none; /* Hide desktop section nav on mobile */
+        display: none;
     }
 
     .hamburger-nav {
-        display: block; /* Show hamburger menu on mobile */
+        display: block;
     }
 
     .header__top {
@@ -937,13 +917,13 @@ body {
     }
 
     .signup-form {
-        flex-direction: row; /* Keep on same line even on mobile */
+        flex-direction: row;
         gap: 0.5rem;
     }
 
     .signup-form__input {
         flex: 1;
-        min-width: 0; /* Allow shrinking */
+        min-width: 0;
     }
 
     .signup-form__button {
@@ -984,7 +964,6 @@ body {
     }
 }
 
-/* Mobile landscape (less than 576px) */
 @media (max-width: 575px) {
     .header__logo {
         font-size: 1.25rem;
@@ -1034,7 +1013,6 @@ body {
     }
 }
 
-/* Small mobile (less than 480px) */
 @media (max-width: 479px) {
     .hero {
         padding: 1.5rem 1rem;
@@ -1083,7 +1061,6 @@ body {
     }
 }
 
-/* Very small screens (less than 400px) */
 @media (max-width: 399px) {
     .header__top {
         padding: 0.75rem;
