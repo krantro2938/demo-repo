@@ -167,14 +167,61 @@
         transition: right 0.4s ease;
         z-index: 1000;
         overflow-y: auto;
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
     }
 
     .hamburger-nav__menu.active {
         right: 0;
+    }
+
+    /* Close button inside menu */
+    .hamburger-nav__close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 48px;
+        height: 48px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        z-index: 1003;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        border-radius: 8px;
+        transition: var(--transition);
+    }
+
+    .hamburger-nav__close:hover,
+    .hamburger-nav__close:focus {
+        background-color: rgba(44, 85, 48, 0.1);
+    }
+
+    .hamburger-nav__close-line {
+        width: 24px;
+        height: 3px;
+        background-color: var(--primary-color);
+        border-radius: 2px;
+        position: absolute;
+    }
+
+    .hamburger-nav__close-line:first-child {
+        transform: rotate(45deg);
+    }
+
+    .hamburger-nav__close-line:last-child {
+        transform: rotate(-45deg);
+    }
+
+    /* Menu list styling */
+    .hamburger-nav__menu-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        margin: 0;
     }
 
     .hamburger-nav__link {
