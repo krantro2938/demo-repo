@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
     navOverlay.className = 'nav-overlay';
     document.body.appendChild(navOverlay);
 
+    // Get close button inside menu
+    const menuClose = document.getElementById('menuClose');
+
     /**
      * Toggle mobile menu open/closed state
      * Provides visual feedback and manages body scroll
@@ -66,6 +69,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Close menu when clicking on overlay
     navOverlay.addEventListener('click', closeMenu);
+
+    // Close menu when clicking the close button inside menu
+    if (menuClose) {
+        menuClose.addEventListener('click', function(e) {
+            e.stopPropagation();
+            closeMenu();
+        });
+    }
 
     // Close menu when clicking on a link
     hamburgerLinks.forEach(link => {
