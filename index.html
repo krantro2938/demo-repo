@@ -2,23 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Avion - The Future of Timeless Furniture Design. High quality, eco-friendly furniture.">
+    <meta name="theme-color" content="#2c5530">
     <title>Avion - The Future of Timeless Furniture Design</title>
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles/style.css">
-    </head>
+    <!-- Mobile stylesheet - loaded with media query for performance -->
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 1024px)">
+</head>
 
 <body>
+    <!-- Header with sticky positioning for mobile -->
     <header class="header">
         <div class="header__top">
-            <a href="/" class="header__logo">Avion</a>
+            <a href="/" class="header__logo" aria-label="Avion Home">Avion</a>
             <div class="header__actions">
-                <button class="header__button" aria-label="Search"><img src="assets/icons/Search.png" alt="Search icon"></button>
-                <button class="header__button" aria-label="Shopping Cart"><img src="assets/icons/Shopping--cart.png" alt="Shopping cart icon"></button>
-                <button class="header__button" aria-label="User Profile"><img src="assets/icons/User--avatar.png" alt="User avatar icon"></button>
+                <button class="header__button" aria-label="Search">
+                    <img src="assets/icons/Search.png" alt="" width="20" height="20">
+                </button>
+                <button class="header__button" aria-label="Shopping Cart">
+                    <img src="assets/icons/Shopping--cart.png" alt="" width="20" height="20">
+                </button>
+                <button class="header__button" aria-label="User Profile">
+                    <img src="assets/icons/User--avatar.png" alt="" width="20" height="20">
+                </button>
             </div>
         </div>
 
+        <!-- Desktop Navigation -->
         <nav class="nav" aria-label="Main Navigation">
             <ul class="nav__list">
                 <li class="nav__item"><a href="#" class="nav__link">Plants</a></li>
@@ -31,10 +46,10 @@
         </nav>
     </header>
 
-    <!-- Desktop Section Navigation -->
+    <!-- Desktop Section Navigation (hidden on mobile) -->
     <nav class="section-nav" aria-label="Section Navigation">
         <ul class="section-nav__list">
-            <li><a href="#home" class="section-nav__link">Home</a></li>
+            <li><a href="#home" class="section-nav__link active">Home</a></li>
             <li><a href="#advantages" class="section-nav__link">Advantages</a></li>
             <li><a href="#products" class="section-nav__link">Products</a></li>
             <li><a href="#popular" class="section-nav__link">Popular</a></li>
@@ -44,86 +59,89 @@
         </ul>
     </nav>
 
-    <!-- Hamburger Menu for Mobile -->
+    <!-- Mobile Hamburger Navigation (visible only on mobile) -->
     <nav class="hamburger-nav" aria-label="Mobile Section Navigation">
-        <button class="hamburger-nav__toggle" aria-label="Toggle navigation menu">
+        <button class="hamburger-nav__toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
             <span class="hamburger-nav__line"></span>
             <span class="hamburger-nav__line"></span>
             <span class="hamburger-nav__line"></span>
         </button>
-        <ul class="hamburger-nav__menu">
-            <li><a href="#home" class="hamburger-nav__link">Home</a></li>
-            <li><a href="#advantages" class="hamburger-nav__link">Advantages</a></li>
-            <li><a href="#products" class="hamburger-nav__link">Products</a></li>
-            <li><a href="#popular" class="hamburger-nav__link">Popular</a></li>
-            <li><a href="#masonry" class="hamburger-nav__link">Resources</a></li>
-            <li><a href="#about" class="hamburger-nav__link">About</a></li>
-            <li><a href="#newsletter" class="hamburger-nav__link">Newsletter</a></li>
+        <ul class="hamburger-nav__menu" id="mobileMenu" role="menu">
+            <li role="none"><a href="#home" class="hamburger-nav__link" role="menuitem">Home</a></li>
+            <li role="none"><a href="#advantages" class="hamburger-nav__link" role="menuitem">Advantages</a></li>
+            <li role="none"><a href="#products" class="hamburger-nav__link" role="menuitem">Products</a></li>
+            <li role="none"><a href="#popular" class="hamburger-nav__link" role="menuitem">Popular</a></li>
+            <li role="none"><a href="#masonry" class="hamburger-nav__link" role="menuitem">Resources</a></li>
+            <li role="none"><a href="#about" class="hamburger-nav__link" role="menuitem">About</a></li>
+            <li role="none"><a href="#newsletter" class="hamburger-nav__link" role="menuitem">Newsletter</a></li>
         </ul>
     </nav>
 
     <main>
+        <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero__content">
                 <h1 class="hero__title">The furniture brand for the future, with timeless designs</h1>
                 <p class="hero__text">A new era in eco friendly furniture with Avelon, the French luxury retail brand with nice fonts, tasteful colors and a beautiful way to display things digitally using modern web technologies</p>
-                <a href="#" class="button">View collection</a>
+                <a href="#products" class="button">View collection</a>
             </div>
-            <img src="assets/img/Right%20Image.png" alt="A contemporary dark chair with a curved back and wooden legs, set against a light blue wall." class="hero__image">
+            <img src="assets/img/Right%20Image.png" alt="A contemporary dark chair with a curved back and wooden legs, set against a light blue wall." class="hero__image" loading="eager" width="600" height="400">
         </section>
 
+        <!-- Advantages Section -->
         <section class="advantages" id="advantages">
             <h2 class="advantages__title">What makes our brand different</h2>
             <div class="feature-grid">
                 <article class="feature-grid__item">
-                    <img src="assets/icons/Delivery.png" alt="Delivery Truck Icon">
+                    <img src="assets/icons/Delivery.png" alt="" width="48" height="48" loading="lazy">
                     <h3 class="feature-grid__title">Next day as standard</h3>
                     <p class="feature-grid__text">Order before 3pm and get your order the next day as standard</p>
                 </article>
                 <article class="feature-grid__item">
-                    <img src="assets/icons/Purchase.png" alt="Craftsmanship Icon">
+                    <img src="assets/icons/Purchase.png" alt="" width="48" height="48" loading="lazy">
                     <h3 class="feature-grid__title">Made by true artisans</h3>
                     <p class="feature-grid__text">Handmade crated goods made with real passion and craftmanship</p>
                 </article>
                 <article class="feature-grid__item">
-                    <img src="assets/icons/Checkmark--outline.png" alt="Price Tag Icon">
+                    <img src="assets/icons/Checkmark--outline.png" alt="" width="48" height="48" loading="lazy">
                     <h3 class="feature-grid__title">Unbeatable prices</h3>
-                    <p class="feature-grid__text">For our materials and quality you won’t find better prices anywhere</p>
+                    <p class="feature-grid__text">For our materials and quality you won't find better prices anywhere</p>
                 </article>
                 <article class="feature-grid__item">
-                    <img src="assets/icons/Sprout.png" alt="Recycling Icon">
+                    <img src="assets/icons/Sprout.png" alt="" width="48" height="48" loading="lazy">
                     <h3 class="feature-grid__title">Recycled packaging</h3>
                     <p class="feature-grid__text">We use 100% recycled packaging to ensure our footprint is manageable</p>
                 </article>
             </div>
         </section>
 
+        <!-- New Ceramics Section -->
         <section class="products new-ceramics" id="products">
             <h2 class="products__title">New ceramics</h2>
             <div class="product-grid">
                 <article class="product-card">
-                    <img src="assets/img/Photo.png" alt="Set of three rustic, light-colored ceramic vases." loading="lazy" class="product-card__image">
+                    <img src="assets/img/Photo.png" alt="Set of three rustic, light-colored ceramic vases." loading="lazy" class="product-card__image" width="300" height="250">
                     <div class="product-card__content">
                         <h3 class="product-card__title">The Dandy chair</h3>
                         <p class="product-card__price">£250</p>
                     </div>
                 </article>
                 <article class="product-card">
-                    <img src="assets/img/Photo%20(1).png" alt="Set of three rustic, light-colored ceramic vases." loading="lazy" class="product-card__image">
+                    <img src="assets/img/Photo%20(1).png" alt="Set of three rustic, light-colored ceramic vases." loading="lazy" class="product-card__image" width="300" height="250">
                     <div class="product-card__content">
                         <h3 class="product-card__title">Rustic Vase Set</h3>
                         <p class="product-card__price">£155</p>
                     </div>
                 </article>
                 <article class="product-card">
-                    <img src="assets/img/Photo%20(1).png" alt="Tall, light-gray silky vase on a white table." loading="lazy" class="product-card__image">
+                    <img src="assets/img/Photo%20(1).png" alt="Tall, light-gray silky vase on a white table." loading="lazy" class="product-card__image" width="300" height="250">
                     <div class="product-card__content">
                         <h3 class="product-card__title">The Silky Vase</h3>
                         <p class="product-card__price">£125</p>
                     </div>
                 </article>
                 <article class="product-card">
-                    <img src="assets/img/Photo%20(2).png" alt="Dark bronze cone-shaped pendant lamp hanging against a turquoise wall." loading="lazy" class="product-card__image">
+                    <img src="assets/img/Photo%20(2).png" alt="Dark bronze cone-shaped pendant lamp hanging against a turquoise wall." loading="lazy" class="product-card__image" width="300" height="250">
                     <div class="product-card__content">
                         <h3 class="product-card__title">The Lucy Lamp</h3>
                         <p class="product-card__price">£399</p>
@@ -133,25 +151,26 @@
             <a href="#" class="button">View collection</a>
         </section>
 
+        <!-- Popular Products Section -->
         <section class="products popular-products" id="popular">
             <h2 class="products__title">Our popular products</h2>
             <div class="product-grid">
                 <article class="product-card">
-                    <img src="assets/img/Large.png" alt="A dark green velvet sofa with wooden legs, set against a white wall." loading="lazy" class="product-card__image">
+                    <img src="assets/img/Large.png" alt="A dark green velvet sofa with wooden legs, set against a white wall." loading="lazy" class="product-card__image" width="300" height="250">
                     <div class="product-card__content">
                         <h3 class="product-card__title">The Poplar suede sofa</h3>
                         <p class="product-card__price">£980</p>
                     </div>
                 </article>
                 <article class="product-card">
-                    <img src="assets/img/Photo.png" alt="A dark green velvet sofa with wooden legs, set against a white wall." loading="lazy" class="product-card__image">
+                    <img src="assets/img/Photo.png" alt="A dark green velvet sofa with wooden legs, set against a white wall." loading="lazy" class="product-card__image" width="300" height="250">
                     <div class="product-card__content">
                         <h3 class="product-card__title">The Dandy chair</h3>
                         <p class="product-card__price">£250</p>
                     </div>
                 </article>
                 <article class="product-card">
-                    <img src="assets/img/Photo%20(3).png" alt="A dark green velvet sofa with wooden legs, set against a white wall." loading="lazy" class="product-card__image">
+                    <img src="assets/img/Photo%20(3).png" alt="A dark green velvet sofa with wooden legs, set against a white wall." loading="lazy" class="product-card__image" width="300" height="250">
                     <div class="product-card__content">
                         <h3 class="product-card__title">The Dandy chair</h3>
                         <p class="product-card__price">£250</p>
@@ -161,17 +180,18 @@
             <a href="#" class="button">View collection</a>
         </section>
 
+        <!-- Newsletter Section -->
         <section class="newsletter" id="newsletter">
             <h2 class="newsletter__title">Join the club and get the benefits</h2>
             <p class="newsletter__text">Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop up stores and more</p>
-            <form action="#" method="POST" class="signup-form">
+            <form action="#" method="POST" class="signup-form" novalidate>
                 <label for="email" class="visually-hidden">Join our mailing list</label>
-                <input type="email" id="email" name="email" placeholder="your@email.com" required class="signup-form__input">
+                <input type="email" id="email" name="email" placeholder="your@email.com" required class="signup-form__input" autocomplete="email" inputmode="email">
                 <button type="submit" class="signup-form__button">Sign up</button>
             </form>
         </section>
 
-        <!-- Masonry Section (Optional) -->
+        <!-- Masonry Section -->
         <section class="masonry-section" id="masonry">
             <h2 class="masonry-section__title">Additional Resources</h2>
             <div class="masonry-grid">
@@ -202,6 +222,7 @@
             </div>
         </section>
 
+        <!-- Brand Story Section -->
         <section class="brand-story" id="about">
             <div class="brand-story__content">
                 <h2 class="brand-story__title">From a studio in London to a global brand with over 400 outlets</h2>
@@ -209,10 +230,11 @@
                 <p class="brand-story__text">Handmade and lovingly crafted future and Homeware is what we live, breathe and design so our Chelsea boutique became the hotbed for the London interior design community.</p>
                 <a href="#" class="button">Get in touch</a>
             </div>
-            <img src="assets/img/Image.png" alt="A cozy corner with a light sofa, orange pillows, and potted plants on wooden cylinders." loading="lazy" class="brand-story__image">
+            <img src="assets/img/Image.png" alt="A cozy corner with a light sofa, orange pillows, and potted plants on wooden cylinders." loading="lazy" class="brand-story__image" width="600" height="400">
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer__links-grid">
             <div class="footer__group">
@@ -247,13 +269,20 @@
         <div class="footer__bottom">
             <p class="footer__copyright">Copyright 2022 Aven LTD</p>
             <div class="footer__social-links">
-                <a href="#" aria-label="LinkedIn" class="footer__social-link"><img src="assets/icons/Logo--linkedin.png" alt="LinkedIn logo"></a>
-                <a href="#" aria-label="Pinterest" class="footer__social-link"><img src="assets/icons/Logo--pinterest.png" alt="Pinterest logo"></a>
-                <a href="#" aria-label="Skype" class="footer__social-link"><img src="assets/icons/Logo--skype.png" alt="Skype logo"></a>
+                <a href="#" aria-label="LinkedIn" class="footer__social-link">
+                    <img src="assets/icons/Logo--linkedin.png" alt="" width="20" height="20" loading="lazy">
+                </a>
+                <a href="#" aria-label="Pinterest" class="footer__social-link">
+                    <img src="assets/icons/Logo--pinterest.png" alt="" width="20" height="20" loading="lazy">
+                </a>
+                <a href="#" aria-label="Skype" class="footer__social-link">
+                    <img src="assets/icons/Logo--skype.png" alt="" width="20" height="20" loading="lazy">
+                </a>
             </div>
         </div>
     </footer>
 
-    <script src="scripts/main.js"></script>
+    <!-- Scripts -->
+    <script src="scripts/menu.js"></script>
 </body>
 </html>

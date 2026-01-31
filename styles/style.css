@@ -509,6 +509,72 @@ body {
 }
 
 
+/* Scroll to Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 56px;
+    height: 56px;
+    background: #2c5530;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* HIG & Material Design touch target */
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.scroll-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: #1e3a22;
+    transform: scale(1.1);
+}
+
+.scroll-top:focus {
+    outline: 2px solid #2c5530;
+    outline-offset: 2px;
+}
+
+.scroll-top:active {
+    transform: scale(0.95);
+}
+
+/* Touch feedback for interactive elements */
+.touch-feedback {
+    transition: transform 0.15s ease;
+}
+
+.touch-feedback:active {
+    transform: scale(0.98);
+}
+
+/* Active state for navigation links */
+.section-nav__link.active {
+    color: #2c5530;
+    background-color: #e8f5e8;
+}
+
+.hamburger-nav__link.active {
+    color: #2c5530;
+    padding-left: 10px;
+}
+
+/* Section Navigation */
 .section-nav {
     background-color: #f8f9fa;
     border-bottom: 1px solid #e5e5e5;
